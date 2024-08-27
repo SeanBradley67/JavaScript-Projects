@@ -1,6 +1,8 @@
 // Script Assignment
 // alert("Hello, World!")
 
+// There are a lot of <br> randomly in this file because I want each "assignment" on its own line and we haven't gone over that yet
+
 // window.alert() Method Assignment
 window.alert("Hello, World!");
 
