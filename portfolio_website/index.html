@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sean Bradley | Developer</title>
+        <link rel="stylesheet" type="text/css" href="./css/shared.css">
+    </head>
+
+    <body class="Background">
+        
+        <!-- Navbar -->
+        <div class="Navbar">
+            <a href="#Home" class="active">Home</a>
+            <a href="#Slideshow">Slideshow</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <!-- onclick() and ondblclick() added to open and close the contact form -->
+            <a onclick="openForm()" ondblclick="closeForm()">Contact</a>
+        </div>
+
+        <!-- Background video -->
+        <div id="Home">
+            <video autoplay muted loop id="Video">
+                <source src="./media/videos/coding.mp4" type="video/mp4">
+                <!-- Display message if video fails to run -->
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+        <!-- Video text -->
+        <div class="Video_Text">
+            <h1 class="white-text">Sean Bradley's Portfolio</h1>
+            <strong>
+                <p class="center">
+                    <q> Any fool can write code that a computer can understand. 
+                        <br>Good programmers write code that humans can understand.
+                    </q>
+                    <br>
+                    <br> - Martin Fowler
+                    <br>
+                    <br>
+                    <br> Welcome to my portfolio website. On it, I will tell you about my background and experience.
+                    <br>
+                    <br> Thank you for stopping by! 
+                </p>
+            </strong>
+        </div>
+
+        <!-- Slideshow section -->
+        <div id="Slideshow">
+            <div id="Slideshow_Background">
+                <div id="Slideshow_Container">
+                    <!-- Slide 1 -->
+                    <div class="mySlides fade">
+                        <img src="./media/images/laptop.jpg" alt="" class="Slideshow_Images">
+                        <div class="text">I'm available to assist you on your project!</div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="mySlides fade">
+                        <img src="./media/images/HTML_CSS_and_JavaScript.jpeg" alt="" class="Slideshow_Images">
+                        <div class="text">I'm available to assist you on your project!</div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="mySlides fade">
+                        <img src="./media/images/Python.png" alt="" class="Slideshow_Images">
+                        <div class="text">I'm available to assist you on your project!</div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="mySlides fade">
+                        <img src="./media/images/C_Sharp_and_Dot_NET.png" alt="" class="Slideshow_Images">
+                        <div class="text">I'm available to assist you on your project!</div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="mySlides fade">
+                        <img src="./media/images/SQL_and_Database.jpg" alt="" class="Slideshow_Images">
+                        <div class="text">I'm available to assist you on your project!</div>
+                    </div>
+                    <!-- Previous and Next Buttons -->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br> <!-- Adds a space between the slideshow images and the dots -->
+
+                <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <!-- <span class="dot" onclick="currentSlide(6)"></span> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- About section -->
+        <div class="Row" id="About">
+            <!-- Left Column -->
+            <div class="Column_2">
+                <img src="./media/images/code.png" alt="Typed Code">
+            </div>
+            <!-- Right Column -->
+            <div class="Column_1">
+                <h1>About</h1>
+                <p>
+                    I am an aspiring software developer who loves to code! 
+                    <br>
+                    <br>I am a future graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy's</a> Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more. 
+                    <br> <!-- Will change the above to graduate after completion of the program -->
+                    <br>I am a full-stack developer and would love to work with you on your project. <a href="#contact">Contact</a> me below!
+                </p>
+            </div>
+        </div>
+
+        <!-- GitHub Section -->
+        <div class="Row" id="GitHub">
+            <!-- Left Column -->
+            <div class="Column_1">
+                <h2>GitHub</h2>
+                <p class="center">
+                    You can view my coding projects on my GitHub profile here:
+                    <br>
+                    <p class="center"><a href="https://github.com/SeanBradley67" target="_blank">Sean Bradley - Github</a></p>
+                </p>
+            </div>
+            <!--Right column-->
+            <div class="Column_2">
+                <a href="https://github.com/SeanBradley67" target="_blank"><img src="./media/images/GitHub.png" alt="GitHub Logo"></a>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+                <form action="https://formspree.io/f/meojkwva" method="POST" class="form-container">
+                    <h1>Contact</h1>
+                    <label for="name"><b>Name</b></label>
+                        <input type="text" placeholder="Type you name here" name="name" required>
+                    <label for="phone"><b>Phone</b></label>
+                        <input type="text" placeholder="Type your phone number here" name="phone">
+                    <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Type your email address here" name="email" required>
+                    <label for="message"><b>Message</b></label>
+                        <input type="text" placeholder="Type your message here" name="message">
+
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            <p class="center">&copy;Sean Bradley | <a href="https://Sean-Bradley.ca">Sean-Bradley.ca</a> | 2024</p>
+        </footer>
+        
+        <script src="js/portfolio.js"></script>
+    </body>
+</html>
